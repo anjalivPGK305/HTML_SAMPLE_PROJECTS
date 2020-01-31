@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            passing values
+        </title>
+    </head>
+    <body>
+    value1: <input type="number" id="num"><br>
+    value2: <input type="number" id="num1"><br>
+    <button onclick="MyFunction(num.value,num1.value)">Press button</button>
+     <script>
+     function MyFunction(num,num1)
+     {
+         num=parseInt(num);
+         num1=parseInt(num1);
+         var n=num+num1;
+         document.write("<h1>You gave "+num+"</h1>");
+         document.write("<h1>You gave "+num1+"</h1>");
+         document.write("<h1>You gave "+n+"</h1>");
+     }
+     </script>
+     </body>
+</html>

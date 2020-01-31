@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script type="text/javascript">
+             var a=prompt("Enter number1");
+             var b=prompt("Enter number2");
+             a=parseInt(a);
+             b=parseInt(b);
+            function add(a,b){
+                var c=a+b;
+                document.write(c);
+                window.print();
+            }
+            function sub(a,b){
+                var c=a-b;
+                document.write(c);
+                window.print();
+            }
+            function mul(a,b){
+                var c=a*b;
+                document.write(c);
+                window.print();
+            }
+            function div(a,b){
+                var c=a/b;
+                document.write(c);
+                window.print();
+            }
+            </script>
+    </head>
+    <body>
+    <input type="button" onclick="add(a,b)" value="Add">
+    <input type="button" onclick="sub(a,b)" value="Subtract">
+    <input type="button" onclick="mul(a,b)" value="Multiply">
+    <input type="button" onclick="div(a,b)" value="Divide">
+    </body>
+</html>

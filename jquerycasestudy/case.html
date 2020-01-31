@@ -1,0 +1,191 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+        <script src="js/jquery-1.11.0.js"></script>
+        <style>
+         
+        body{
+            background-color: whitesmoke;
+        }
+            .head{
+                background-color: blue;
+                height: 70px;
+            }
+            .header{
+               
+                background-color: white;
+                width: 400px;
+                height: 400px;
+                margin-left: 500px;
+                margin-top: 100px;
+            }
+            #register,#login{
+                text-decoration: none;
+                display: inline-block;
+                width: 175px;
+                background-color:lightgrey;
+                text-align: center;
+                color: black;
+                font-size: 20px;
+                padding: 10px;
+               
+                
+            }
+            .form1,.form2{
+                text-align: center;
+                width: 100%;
+                margin-top: 30px;
+                
+
+            }
+            .form2{
+                display: none;
+            }
+            #check{
+               float: left;
+               margin-left: 30px;
+            }
+            #forgot{
+                float: right;
+               margin-top: 17px;
+             margin-right: 20px;
+            }
+            #submit{
+                border: none;
+                 outline: none;
+                 height: 40px;
+                 background:green;
+                 color:#fff;
+                 font-size: 18px;
+                 border-radius:20px;
+                 width: 200px;
+            }
+            #submitt{
+                border: none;
+                 outline: none;
+                 height: 40px;
+                 background:green;
+                 color:#fff;
+                 font-size: 18px;
+                 border-radius:20px;
+                 width: 100px;
+            }
+            #in{
+               
+                 border-bottom:1px solid black;
+                 height: 40px;
+                 color:black;
+                font-size: 16px; 
+            }
+
+        </style>
+    </head>
+    <body> 
+        <div class="head"> </div>
+             
+           
+        <div class="header">
+           
+            <div class="main">
+                <a href="#" id="login" >Sign Up</a>
+                <a href="#" id="register" >Log in</a>
+            </div>
+            <br>
+            <br>
+            <div class="form1">
+                <input type="text" placeholder="First & Last name" required="required" id="in"><br><br>
+                <input type="email" placeholder="Email" required="required" id="in"><br><br>
+                <input type="password" placeholder="Password" required="required" id="in"><br><br>
+                <input type="submit" value="Create An Account" id="submit">
+
+            </div>
+            <br>
+            
+            <div class="form2">
+                <input type="text" placeholder="Your userName or email" required="required" id="in"><br><br>
+                <input type="password" placeholder="Password" required="required" id="in"><br><br>
+                <p id="check"><input type="checkbox" >Remember me<br></p>
+                <a href="#" id="forgot">Forgot Your Password</a><br><br><br>
+                <input type="submit" value="Log in" id="submitt">
+
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#register").click(function(){
+                    $(".form2").show();
+                    $(".form1").hide();
+                    $("#register").addClass('active');
+                    $("#login").removeClass('active');
+
+
+                });
+            });
+            $(document).ready(function(){
+                $("#login").click(function(){
+                    $(".form1").show();
+                    $(".form2").hide();
+                    $("#login").addClass('active');
+                    $("#register").removeClass('active');
+
+
+                });
+            });
+            $(function() {
+               
+                 $("#email_error_message").hide();
+                $("#password_error_message").hide();
+                
+               
+                var error_email = false;
+                var error_password = false;
+                
+               
+                $("#form_email").focusout(function() {
+                    check_email();
+                    
+                });
+                $("#form_password").focusout(function() {
+                    check_password();
+                    
+                });
+               
+            
+
+            });
+           
+                function check_password() {
+                
+                    var password_length = $("#form_password").val().length;
+                    
+                    if(password_length < 8 || password_length > 20) {
+                        $("#password_error_message").html("Should be 8 characters");
+                        $("#password_error_message").show();
+                        error_username = true;
+                    } 
+                    else {
+                        $("#password_error_message").hide();
+                    }
+                
+                }  
+               
+                function check_email(){
+                    var regax= new RegExp(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+                    if(regax.test($("#form_email").val())){
+                        $("#email_error_message").hide();  
+                    }
+                    else{
+                        $("#email_error_message").html("Invalid Email");
+                        $("#email_error_message").show(); 
+                        error_email = true;
+                    }
+
+
+
+
+                }
+        </script>
+    </body>
+    </html>

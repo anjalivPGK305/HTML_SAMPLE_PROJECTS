@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="reg.css">
+        <script src="reg.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2 class="heading">Registration <i class="fa-fa-registered fa-2x"></i></h2>
+
+            <div class="adduser">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Registration Details<i class="fa fa-user-plus fa-2x"></i></p>
+
+                        <div class="col-md-8">
+                            <input type="text" placeholder="FirstName" id="fname" required="required"><br>
+                            <input type="text" placeholder="LastName" id="lname" required="required" minlength="2"><br>
+                            <input type="text" placeholder="City" id="city" required="required"><br>
+                            <input type="text" placeholder="State" id="state" required="required"><br>
+                            <input type="text" placeholder="Qualification" id="Qualification" required="required"><br>
+                            <input type="date" name="Date" id="date" ><br>
+                            <input type="text" placeholder="UserName" id="name" required="required"><br>
+                            <input type="email" placeholder="Email" id="name1" required="required"><br>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary" id="addUser" onclick="addUser()">Register</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <p>USERS LIST<i class="fa fa-list-alt fa-2x"></i></p>
+                        </div>
+                    </div>
+                    <div class="user" id="userlist">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

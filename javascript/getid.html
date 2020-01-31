@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function add(){
+                var number=parseInt(document.getElementById("number").value);
+                var number1=parseInt(document.getElementById("number1").value);
+                document.getElementById("number2").value=number+number1;
+            }
+            </script>
+            Number1:<input type="text" id="number" name="number"/><br/>
+            Number2:<input type="text" id="number1" name="number1"/><br/>
+            Add:<input type="text" id="number2" name="number2"/><br/>
+            <input type="button" value="Add" onclick="add()"/>
+    </head>
+    
+</html>

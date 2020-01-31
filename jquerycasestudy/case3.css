@@ -1,0 +1,23 @@
+.form .body .fb{
+    width: 20%;
+    height: 20%;
+    padding-left: 10%;
+}
+.form .body .google{
+    width: 20%;
+    height: 20%;
+    padding-left: 30%;
+    margin-top: -17%;
+}
+.form .body .gmail{
+    width: 20%;
+    height: 20%;
+    padding-left: 50%;
+    margin-top: -17%;
+}
+.form .body .linkedin{
+    width: 20%;
+    height: 20%;
+    padding-left: 70%;
+    margin-top: -17%;
+}

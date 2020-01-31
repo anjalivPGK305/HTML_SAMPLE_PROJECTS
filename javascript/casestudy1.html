@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: blue;
+            }
+            .table2{
+                border-left: 2px;
+                padding-left: 40%;
+                padding-top: 0%;
+            }
+            .table3{
+                padding-left: 5%;
+                padding-top: 15%;
+            }
+            
+                </style>
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="table1">
+                <h2>Number of Registration</h2>
+                <h3>data</h3>
+            </div>
+            <div class="table3">
+                <h3>Student Details</h3>
+                <table id="table">
+                    <tr>
+                    <th>Name</th>
+                    <th> </th>
+                    <th> </th>
+                    </tr>
+                    
+                </table>
+                
+            </div>
+            <div class="table2">
+                <h2>Student Registration</h2>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="button" value="Add" onclick="add()"/>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var rindex;
+        table=document.getElementById("table");
+        function checkEmptyInput(){
+            var isEmpty = false,
+            name=document.getElementById("name").value;
+            
+            if(name==="")
+            {
+                alert("Name cannot be empty");
+                isEmpty=true;
+            }
+            return isEmpty;
+        }
+        function add(){
+            if(!checkEmptyInput())
+            {
+                var newRow= table.insertRow(table.length)
+                cell1= newRow.insertCell(0),
+                cell2= newRow.insertCell(1),
+                cell3= newRow.insertCell(2),
+                name= document.getElementById("name").value;
+
+                cell1.innerHTML = name;
+                cell2.innerHTML = "<button onclick='edit()'>Edit</button>";
+                cell3.innerHTML = "<button onclick='del()'>Delete</button>";
+                
+                selectedRowToInput();
+                
+            }
+            
+        }
+        function selectedRowToInput(){
+            for (var i = 1; i < table.rows.length; i++) {
+                table.rows[i].onclick = function () {
+                    rIndex = this.rowIndex;
+                    document.getElementById("name").value = this.cells[0].innerHTML;
+                }
+        }
+        }
+        
+        selectedRowToInput();
+        function edit(){
+            name=document.getElementById("name").value;
+            if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = name;
+            }
+        }
+        function del(){
+            table.deleteRow(rIndex);
+            document.getElementById("name").value="";
+        }
+        </script>
+    </body>
+</html>
