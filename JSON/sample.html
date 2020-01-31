@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>json</title>
+    </head>
+    <body>
+        <p id="user"></p>
+        <script>
+        var s = '{"first_name" : "Anjali", "last_name" : "Vijayakumar", "location" : "Thrissur"}'
+        var obj = JSON.parse(s);
+        console.log(obj);
+        document.getElementById("user").innerHTML= "Name: "+obj.first_name+" "+obj.last_name+"<br>"+"Location: "+obj.location;
+        </script>
+    </body>
+</html>

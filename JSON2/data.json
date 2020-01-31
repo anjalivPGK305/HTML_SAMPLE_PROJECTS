@@ -1,0 +1,29 @@
+{
+    "events": [
+        {
+            "id":"1",
+            "firstname": "Anjali",
+            "lastname" : "Vijayakumar",
+            "dateofbirth": "October 17",
+            "age": "22",
+            "place":"Thrissur"
+        },
+        {
+            "id":"2",
+            "firstname": "Sreehari",
+            "lastname" : "V S",
+            "dateofbirth": "April 29",
+            "age": "21",
+            "place":"Kunnamkulam"
+        },
+        {
+            "id":"3",
+            
+            "firstname": "Aniesh",
+            "lastname" : "Gokul",
+            "dateofbirth": "October 17",
+            "age": "22",
+            "place":"Ayyanthole"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>multiple</title>
+    </head>
+    <body>
+        <h2>Create object for JSON string</h2>
+        <p id="user"></p>
+        <script>
+        var text= '{"employees":[' +
+        '{"firstname":"John","lastname":"Deo"},'+
+        '{"firstname":"Anna","lastname":"smith"},'+
+        '{"firstname":"Peter","lastname":"Jones"}]}';
+
+        obj = JSON.parse(text);
+        document.getElementById("user").innerHTML = obj.employees[0].firstname+" "+obj.employees[1].lastname;
+        </script>
+    </body>
+</html>
